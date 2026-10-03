@@ -128,6 +128,19 @@ svg { width: 1em; height: 1em; }
 .project-actions a { padding-bottom: 5px; border-bottom: 1px solid currentColor; display: flex; align-items: center; gap: 9px; color: var(--acid); font: 600 .67rem var(--font-mono), monospace; letter-spacing: .07em; }
 .project-actions a:last-child { color: var(--text); }
 
+.study-project { border-top: 1px solid var(--line); }
+.study-project .project-view { background: radial-gradient(circle at 45% 45%, #b7803920, transparent 65%); }
+.study-preview { display: block; width: min(100%, 680px); border: 2px solid #715038; background: #251e1c; color: #edddbc; box-shadow: 8px 8px 0 #0005; }
+.study-preview:focus-visible { outline: 3px solid var(--acid); outline-offset: 6px; }
+.study-preview-top, .study-preview-note { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px; font: 500 .6rem var(--font-mono), monospace; }
+.study-preview-top { border-bottom: 2px solid #715038; }
+.study-preview-top span:last-child { color: #c4a879; font-size: .5rem; }
+.study-preview-desk { min-height: 270px; display: flex; align-items: center; justify-content: center; padding: 22px; background: #563a2a url('/flashcards-art/desk.png') center / cover; image-rendering: pixelated; }
+.study-preview-folder { position: relative; width: 48%; max-width: 210px; transform: rotate(-6deg); }
+.study-preview-folder:nth-child(2) { transform: translateY(20px) rotate(7deg); }
+.study-preview-folder img { display: block; width: 100%; height: auto; }
+.study-preview-folder span { position: absolute; left: 13%; right: 13%; top: 49%; padding: 6px 2px; background: #ecdfb9; color: #3e3024; text-align: center; font: 600 clamp(.55rem, 1vw, .8rem) var(--font-mono), monospace; box-shadow: 2px 2px 0 #0003; }
+.study-preview-note { border-top: 2px solid #715038; line-height: 1.6; }
 .profile { background: var(--profile-bg); color: var(--profile-text); }
 .light-bar { border-color: var(--profile-line); color: var(--profile-muted); }
 .light-bar span:first-child { color: #315cc8; }

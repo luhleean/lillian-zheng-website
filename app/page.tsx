@@ -78,7 +78,7 @@ export default function Home() {
       <section className="work" id="work">
         <header className="section-bar">
           <span>01 / SELECTED WORK</span>
-          <span>CDC PLACES / 2025 DATA</span>
+          <span>DATA EXPLORATION / STUDY TOOLS</span>
         </header>
 
         <article className="project">
@@ -125,6 +125,37 @@ export default function Home() {
             <div className="project-actions">
               <a href={liveProject} target="_blank" rel="noreferrer">OPEN LIVE PROJECT <ArrowUpRight /></a>
               <a href={projectRepo} target="_blank" rel="noreferrer">SOURCE CODE <Code2 /></a>
+            </div>
+          </div>
+        </article>
+        <article className="project study-project" id="study-desk">
+          <div className="project-index">
+            <span>PROJECT</span>
+            <strong>002</strong>
+            <small>LEARNING TOOLS<br />FLASHCARDS &amp; ORGANIZATION</small>
+          </div>
+          <div className="project-view">
+            <a className="study-preview" href="/flashcards" aria-label="Open Study Desk flashcards">
+              <div className="study-preview-top"><span>STUDY DESK</span><span>YOUR QUIET CORNER</span></div>
+              <div className="study-preview-desk" aria-hidden="true">
+                {['Biology', 'Statistics'].map(label => <div className="study-preview-folder" key={label}><img src="/flashcards-art/folder.png" alt="" loading="lazy" width="1024" height="1024"/><span>{label}</span></div>)}
+              </div>
+              <div className="study-preview-note">A class. A topic. One card at a time. <ArrowUpRight /></div>
+            </a>
+          </div>
+          <div className="project-info">
+            <p className="project-code">WEB PROJECT / 2026</p>
+            <h2>Study<br />Desk</h2>
+            <p className="project-summary">A quieter place to study. Organize classes into folders, turn notes into flashcards, and practice what needs another look—all on a pixel-art desk that saves your progress across devices.</p>
+            <dl>
+              <div><dt>TOOLS</dt><dd>Flashcards / Folders / Imports</dd></div>
+              <div><dt>STUDY</dt><dd>Shuffle / Mastery / Review</dd></div>
+              <div><dt>STACK</dt><dd>React / TypeScript / Cloudflare</dd></div>
+              <div><dt>ROLE</dt><dd>Design / UI / Development</dd></div>
+            </dl>
+            <div className="project-actions">
+              <a href="/flashcards">OPEN STUDY DESK <ArrowUpRight /></a>
+              <a href="https://github.com/luhleean/lillian-zheng-website" target="_blank" rel="noreferrer">SOURCE CODE <Code2 /></a>
             </div>
           </div>
         </article>
