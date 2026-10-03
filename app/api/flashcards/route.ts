@@ -1,0 +1,3 @@
+import { checkOrigin, failure, readLibrary, saveLibrary, userId } from '@/lib/flashcard-store';
+export async function GET(request: Request) { try { return Response.json(await readLibrary(userId(request)), {headers:{'Cache-Control':'private, no-store'}}); } catch(e) { return failure(e); } }
+export async function PUT(request: Request) { try { checkOrigin(request); const user = userId(request); const raw = await request.text(); if(raw.length > 2_000_000) return Response.json({error:'Library is too large.'},{status:413}); const body = JSON.parse(raw); return Response.json(await saveLibrary(user,body.library,body.revision)); } catch(e) { return failure(e); } }
